@@ -1,6 +1,6 @@
 .flower {
   position: absolute;
-  bottom: 10vmin;
+  bottom: 5vmin;
   transform-origin: bottom center;
   z-index: 10;
   --fl-speed: 0.8s;
@@ -11,7 +11,7 @@
 }
 
 .flower--1 .flower__line {
-  height: 70vmin;
+  height: 64vmin;
   animation-delay: 0.3s;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .flower--2 .flower__line {
-  height: 60vmin;
+  height: 54vmin;
   animation-delay: 0.6s;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .flower--4 .flower__line {
-  height: 50vmin;
+  height: 46vmin;
   animation-delay: 1.2s;
 }
 
@@ -233,16 +233,11 @@
 }
 
 .tema-tulipanes .flower__white-circle {
-  width: 5vmin;
-  height: 3vmin;
-  left: -2.5vmin;
-  top: -1vmin;
-  background-color: #FFF7E0;
+  display: none;
 }
 
 .tema-tulipanes .flower__white-circle::after {
-  background-image: none;
-  background-color: gold;
+  display: none;
 }
 
 /* Cerezos — pétalos planos con muesca, colores sólidos, distribución radial */

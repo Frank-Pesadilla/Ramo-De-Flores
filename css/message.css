@@ -4,70 +4,55 @@
   left: 50%;
   transform: translateX(-50%);
   max-width: 80vw;
-  z-index: 1000;
+  z-index: 10;
   opacity: 0;
-  animation: fadeInContainer 1s 8s forwards;
+  visibility: hidden;
+  transition: opacity 0.9s ease, visibility 0.4s ease;
+}
+
+.message-container.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .message-box {
-  background: rgba(72, 61, 139, 0.35);
-  border: 1px solid #B19CD9;
-  border-radius: 15px;
-  padding: 20px 25px;
-  box-shadow: 0 8px 32px rgba(72, 61, 139, 0.3);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 250, 248, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  padding: 28px 32px;
+  box-shadow: 0 24px 80px rgba(9, 7, 20, 0.3);
+  backdrop-filter: blur(20px);
 }
 
 .message-text {
-  color: #F8F1FF;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  color: #fffdf9;
+  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  line-height: 1.5;
   text-align: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.02em;
 }
 
 .paragraph {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.4s ease;
+  margin: 0 0 1rem;
+  opacity: 0;
+  min-height: 1.3rem;
+}
+
+.paragraph:last-child {
   margin-bottom: 0;
 }
 
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 0s steps(0) forwards;
-}
-
 .highlight {
-  color: #DDA0DD;
-  font-weight: bold;
-  text-shadow: 0 0 10px rgba(221, 160, 221, 0.5);
+  color: #d8b1ff;
+  font-weight: 600;
 }
 
-@keyframes fadeInContainer {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  0%, 50% {
-    border-color: transparent;
-  }
-  51%, 100% {
-    border-color: #DDA0DD;
-  }
+.message-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 48px rgba(255, 255, 255, 0.08);
+  pointer-events: none;
 }

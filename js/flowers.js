@@ -1,21 +1,21 @@
 const TEMAS = {
   rosas: {
-    "--dark-color": "#010113",
-    "--lavender": "#E6E6FA",
-    "--light-purple": "#DDA0DD",
-    "--deep-purple": "#483D8B"
+    "--dark-color": "#100b1f",
+    "--lavender": "#e8d8ff",
+    "--light-purple": "#d8a9ff",
+    "--deep-purple": "#5d3d7d"
   },
   tulipanes: {
-    "--dark-color": "#1a0a0a",
-    "--lavender": "#FFE4C4",
-    "--light-purple": "#FF6B6B",
-    "--deep-purple": "#C0392B"
+    "--dark-color": "#120b1f",
+    "--lavender": "#f6ebff",
+    "--light-purple": "#c1a0ff",
+    "--deep-purple": "#8a5ec8"
   },
   cerezos: {
-    "--dark-color": "#1a1020",
-    "--lavender": "#FFD1DC",
-    "--light-purple": "#FFB7C5",
-    "--deep-purple": "#D4819F"
+    "--dark-color": "#160b1d",
+    "--lavender": "#ffe3ee",
+    "--light-purple": "#ffb7d6",
+    "--deep-purple": "#c35f8f"
   }
 };
 
@@ -23,7 +23,7 @@ const TEMAS_NOMBRES = ["rosas", "tulipanes", "cerezos"];
 
 function aplicarTema(configTema) {
   const root = document.documentElement;
-  const nombreTema = TEMAS[configTema.nombre] ? configTema.nombre : "rosas";
+  const nombreTema = TEMAS[configTema.nombre] ? configTema.nombre : "tulipanes";
   const paleta = TEMAS[nombreTema];
 
   Object.entries(paleta).forEach(([prop, valor]) => {
@@ -45,4 +45,9 @@ function aplicarTema(configTema) {
   const contenedor = document.querySelector(".flowers") || document.body;
   TEMAS_NOMBRES.forEach((tema) => contenedor.classList.remove(`tema-${tema}`));
   contenedor.classList.add(`tema-${nombreTema}`);
+}
+
+function actualizarFlowerType() {
+  const flowerType = CONFIG.flowerType || CONFIG.tema.nombre || "tulipanes";
+  CONFIG.tema.nombre = flowerType;
 }

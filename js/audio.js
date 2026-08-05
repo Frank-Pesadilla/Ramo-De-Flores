@@ -7,9 +7,7 @@ function crearElementoAudio() {
     audio = document.createElement('audio');
     audio.id = 'backgroundMusic';
     audio.loop = true;
-    if (CONFIG.audio.autoplay) {
-      audio.autoplay = true;
-    }
+    audio.preload = 'auto';
 
     const source = document.createElement('source');
     source.src = `assets/music/${CONFIG.audio.archivo}`;
@@ -20,28 +18,24 @@ function crearElementoAudio() {
       document.createTextNode('Tu navegador no soporta el elemento de audio.')
     );
 
-    const controls = document.querySelector('.audio-controls');
-    controls.appendChild(audio);
+    document.body.appendChild(audio);
   }
 
   return audio;
 }
 
-async function autoPlayMusic() {
-  if (!CONFIG.audio.autoplay) return;
-
+async function playMusic() {
   const audio = crearElementoAudio();
   const playBtn = document.getElementById('playBtn');
 
   audio.volume = CONFIG.audio.volumen;
-
   try {
     await audio.play();
     musicPlaying = true;
-    playBtn.textContent = '🔊';
+    if (playBtn) playBtn.textContent = '🔊';
   } catch (error) {
     console.log('Autoplay bloqueado, usa el botón para reproducir');
-    playBtn.textContent = '▶';
+    if (playBtn) playBtn.textContent = '▶';
   }
 }
 
@@ -54,16 +48,17 @@ async function toggleMusic() {
       audio.volume = CONFIG.audio.volumen;
       await audio.play();
       musicPlaying = true;
-      playBtn.textContent = '🔊';
+      if (playBtn) playBtn.textContent = '🔊';
     } catch (error) {
       console.log('Error al reproducir audio:', error);
-      alert(`Error al reproducir la música. Asegúrate de que el archivo ${CONFIG.audio.archivo} esté en assets/music/.`);
+      if (playBtn) playBtn.textContent = '▶';
     }
   } else {
     audio.pause();
     musicPlaying = false;
-    playBtn.textContent = '🔇';
+    if (playBtn) playBtn.textContent = '🔇';
   }
 }
 
 window.toggleMusic = toggleMusic;
+window.playMusic = playMusic;
