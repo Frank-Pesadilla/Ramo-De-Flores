@@ -394,25 +394,11 @@ body {
 
 @media (max-width: 640px) {
   .gift-box {
-    width: min(48vw, 320px);
-    height: min(28vw, 160px);
-    max-width: 320px;
-    max-height: 160px;
+    width: min(70vw, 240px);
+    height: min(54vw, 190px);
   }
 
   .gift-label {
     font-size: 0.95rem;
-  }
-  .scene-content {
-    padding: 1rem;
-    align-items: start;
-  }
-
-  .gift-stage {
-    min-height: 50vh;
-  }
-
-  .flowers {
-    transform: translateY(-6vh) scale(0.95);
   }
 }
