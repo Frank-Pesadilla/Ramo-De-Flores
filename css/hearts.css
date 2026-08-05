@@ -20,50 +20,6 @@
 .bubble:nth-child(1) {
   top: 8%;
   left: 60%;
-  .heart {
-    fill: transparent;
-    opacity: 0;
-  }
-  .bubble:nth-child(1) .heart {
-    animation: love 3s forwards infinite 0s;
-    transform: scale(0.5) rotate(-4deg);
-  }
-  .bubble:nth-child(2) .heart {
-    animation: love 3s forwards infinite 0.15s;
-    transform: scale(0.5) rotate(22deg);
-  }
-  .bubble:nth-child(3) .heart {
-    animation: love 3s forwards infinite 0.3s;
-    transform: scale(0.5) rotate(-5deg);
-  }
-  .bubble:nth-child(4) .heart {
-    animation: love 3s forwards infinite 0.45s;
-    transform: scale(0.5) rotate(50deg);
-  }
-  .bubble:nth-child(5) .heart {
-    animation: love 3s forwards infinite 0.6s;
-    transform: scale(0.5) rotate(-29deg);
-  }
-  .bubble:nth-child(6) .heart {
-    animation: love 3s forwards infinite 0.75s;
-    transform: scale(0.5) rotate(35deg);
-  }
-  .bubble:nth-child(7) .heart {
-    animation: love 3s forwards infinite 0.9s;
-    transform: scale(0.5) rotate(-5deg);
-  }
-  .bubble:nth-child(8) .heart {
-    animation: love 3s forwards infinite 1.05s;
-    transform: scale(0.5) rotate(40deg);
-  }
-  .bubble:nth-child(9) .heart {
-    animation: love 3s forwards infinite 1.2s;
-    transform: scale(0.5) rotate(-35deg);
-  }
-  .bubble:nth-child(10) .heart {
-    animation: love 3s forwards infinite 1.35s;
-    transform: scale(0.5) rotate(28deg);
-  }
   height: 18vmin;
   width: 18vmin;
   animation: love-burst 3s infinite 0.6s;
