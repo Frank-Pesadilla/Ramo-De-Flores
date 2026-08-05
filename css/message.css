@@ -1,0 +1,73 @@
+.message-container {
+  position: fixed;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 80vw;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeInContainer 1s 8s forwards;
+}
+
+.message-box {
+  background: rgba(72, 61, 139, 0.35);
+  border: 1px solid #B19CD9;
+  border-radius: 15px;
+  padding: 20px 25px;
+  box-shadow: 0 8px 32px rgba(72, 61, 139, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.message-text {
+  color: #F8F1FF;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.paragraph {
+  transition: opacity 0.5s ease;
+  margin-bottom: 0;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 0s steps(0) forwards;
+}
+
+.highlight {
+  color: #DDA0DD;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(221, 160, 221, 0.5);
+}
+
+@keyframes fadeInContainer {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    border-color: transparent;
+  }
+  51%, 100% {
+    border-color: #DDA0DD;
+  }
+}

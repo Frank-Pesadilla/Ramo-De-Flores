@@ -1,0 +1,14 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-color: #010113;
+  --lavender: #E6E6FA;
+  --light-purple: #DDA0DD;
+  --deep-purple: #483D8B;
+}
