@@ -7,16 +7,13 @@ const CONFIG = {
   mensaje: {
     parrafos: [
       "¡Feliz cumpleaños, Mar! 🎉",
-      "Hoy no es un dia cualquiera, porque una persona",
-      "muy especial esta sumando otro años mas a su historia.",
-      "Y pensar que hace tiempo alguien abrió los ojos por",
-      "primera vez sin imaginar todos los momentos que iva ",
-      "a vivir, las personas que iba a conecer y las huellas",
-      "que dejaría en algunos corazones. Ojalá la vida te siga",
-      "regalando motivos para sonreír, personassinceras y momentos",
-      "que se vuelvan recuerdos inolvidables... Porque alguien",
-      "como tú mece una felicidad verdadera y una sonrisa que",
-      "siempre sea sincera"
+      "Hoy celebramos a una persona muy",
+      "especial. Que la vida siga regalándote",
+      "motivos para sonreír,personas sinceras",
+      "y momentos que se conviertan en recuerdos",
+      "inolvidables. Porque alguien como tú merece",
+      "una felicidad verdadera y una sonrisa",
+      "que siempre sea sincera."
     ],
     velocidadTypewriter: 30,
     pausaEntreParrafos: 850,
